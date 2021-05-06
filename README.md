@@ -1,6 +1,6 @@
 # mpxx
 
-A set of spacing CSS classes
+A set of spacing CSS classes compatible with Material ui standards.
 
 ## How it works
 
@@ -51,7 +51,7 @@ Download the [CSS file](https://raw.githubusercontent.com/dherault/mpxx/main/mpx
 
 Or use a CDN:
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mpxx@1.0.0/mpxx.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mpxx@3.0.0/mpxx.min.css">
 ```
 
 ## Contributing

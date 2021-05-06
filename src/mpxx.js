@@ -60,7 +60,7 @@ function mpxx(code) {
     toCss: () => dConversion[d]
       .map(d => [convertMp(mp, d), convertX(x)])
       .filter(filterPaddingAuto)
-      .reduce((css, array) => `${css}${array[0]}: ${array[1]}; `, ''),
+      .reduce((css, array) => `${css}${array[0]}: ${array[1]} !important; `, ''),
     toJs: () => dConversion[d]
       .map(d => [convertMp(mp, d, true), convertX(x)])
       .filter(filterPaddingAuto)
