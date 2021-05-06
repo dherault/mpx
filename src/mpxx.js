@@ -38,7 +38,7 @@ function convertX(x) {
     offset = 0.5
   }
 
-  return `${parseInt(x) + offset}rem`
+  return `${(parseInt(x) + offset) / 2}rem`
 }
 
 function filterPaddingAuto([key, value]) {
