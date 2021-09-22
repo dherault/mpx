@@ -1,6 +1,6 @@
 # mpxx
 
-A set of spacing CSS classes compatible with Material ui standards.
+A set of spacing CSS classes compatible with Material-ui standards.
 
 ## How it works
 
@@ -8,7 +8,7 @@ A set of spacing CSS classes compatible with Material ui standards.
 - Pick a spacing operator: m: margin or p: padding
 - Pick a spacing modifier: t: top, b: bottom, l: left, r: right, x: horizontal, y: vertical
 - Pick a spacing value in half rem: auto, 0, 0h: 0.5, 1, 1h: 1.5, 2, 3, ..., 12
-- (optionnal) Apply a mobile screens suffix: m
+- (optionnal) Apply a media query suffix: m: 600px, t: 900px
 - Combime them into a CSS class:
 ```
 ```html
@@ -18,8 +18,11 @@ A set of spacing CSS classes compatible with Material ui standards.
 <div class="p-2">
   <div>Padding 1rem</div>
 </div>
-<div class="py-4-m">
-  <div>Vertical padding 2rem on mobile screens</div>
+<div class="my-4-m">
+  <div>Vertical margin 2rem on mobile screens</div>
+</div>
+<div class="m-0h-t">
+  <div>Margin 0.25rem on tablet screens</div>
 </div>
 ```
 
@@ -51,7 +54,7 @@ Download the [CSS file](https://raw.githubusercontent.com/dherault/mpxx/main/mpx
 
 Or use a CDN:
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mpxx@3.0.0/mpxx.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mpxx@4.0.0/mpxx.min.css">
 ```
 
 ## Contributing

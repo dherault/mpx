@@ -1,6 +1,6 @@
 {
   "name": "mpxx",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "A set of spacing CSS classes",
   "main": "src/index.js",
   "scripts": {
@@ -30,8 +30,8 @@
   },
   "devDependencies": {
     "csso": "^4.2.0",
-    "eslint": "^7.25.0",
+    "eslint": "^7.32.0",
     "eslint-config-dherault": "^1.6.0",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.12"
   }
 }

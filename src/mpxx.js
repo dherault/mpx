@@ -20,6 +20,12 @@ const dConversion = {
   r: ['right'],
 }
 
+const medias = {
+  '': 0,
+  m: 600,
+  t: 900,
+}
+
 function capitalize(string) {
   return string[0].toUpperCase() + string.slice(1)
 }
@@ -70,6 +76,7 @@ function mpxx(code) {
 
 module.exports = {
   mpxx,
+  medias,
   possibleMp,
   possibleD,
   possibleX,
