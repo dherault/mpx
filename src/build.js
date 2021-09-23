@@ -9,8 +9,10 @@ const { mpxx, medias, possibleMp, possibleD, possibleX } = require('./mpxx')
 let c = 0
 let css = ''
 
-Object.keys(medias).forEach(mediaKey => {
-  if (mediaKey) css += `@media (max-width: ${medias[mediaKey]}px) {\n`
+const mediaKeys = Object.keys(medias)
+
+mediaKeys.forEach((mediaKey, mediaKeyIndex) => {
+  if (mediaKey) css += `@media (min-width: ${medias[mediaKeys[mediaKeyIndex - 1]] || 0}px) and (max-width: ${medias[mediaKey]}px) {\n`
 
   possibleMp.forEach(mp => {
     possibleD.forEach(d => {

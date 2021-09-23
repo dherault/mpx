@@ -215,7 +215,7 @@
 .pr-10 { padding-right: 5rem !important; }
 .pr-11 { padding-right: 5.5rem !important; }
 .pr-12 { padding-right: 6rem !important; }
-@media (max-width: 600px) {
+@media (min-width: 0px) and (max-width: 600px) {
 .m-auto-m { margin: auto !important; }
 .m-0-m { margin: 0rem !important; }
 .m-0h-m { margin: 0.25rem !important; }
@@ -434,7 +434,7 @@
 .pr-11-m { padding-right: 5.5rem !important; }
 .pr-12-m { padding-right: 6rem !important; }
 }
-@media (max-width: 900px) {
+@media (min-width: 600px) and (max-width: 900px) {
 .m-auto-t { margin: auto !important; }
 .m-0-t { margin: 0rem !important; }
 .m-0h-t { margin: 0.25rem !important; }
