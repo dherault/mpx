@@ -7,7 +7,7 @@ A set of spacing CSS classes compatible with Material-ui standards.
 ```
 - Pick a spacing operator: m: margin or p: padding
 - Pick a spacing modifier: t: top, b: bottom, l: left, r: right, x: horizontal, y: vertical
-- Pick a spacing value in half rem: auto, 0, 0h: 0.5, 1, 1h: 1.5, 2, 3, ..., 12
+- Pick a spacing value in half rem: auto, 0, 0h: 0.5, 1, 1h: 1.5, 2, 3, ..., 24
 - (optionnal) Apply a media query suffix: m: 600px, t: 900px
 - Combime them into a CSS class:
 ```
@@ -48,13 +48,25 @@ const Menu = () => (
 )
 ```
 
+Usage with custom sizing:
+```jsx
+import mpxx from 'mpxx'
+
+const customSizing = { '0h': '2px' }
+
+const Menu = () => (
+  <div style={mpxx('mb-0h', customSizing)}>
+    Padding top 1rem
+  </div>
+)
+
 #### HTML
 
 Download the [CSS file](https://raw.githubusercontent.com/dherault/mpxx/main/mpxx.css).
 
 Or use a CDN:
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mpxx@4.0.0/mpxx.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mpxx@6.0.0/mpxx.min.css">
 ```
 
 ## Contributing

@@ -1,3 +1,3 @@
 const mpxx = require('./mpxx')
 
-module.exports = code => mpxx(code).toJs()
+module.exports = (code, sizing) => mpxx(code, sizing).toJs()

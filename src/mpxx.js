@@ -1,4 +1,4 @@
-const maxX = 12
+const maxX = 24
 const possibleMp = ['m', 'p']
 const possibleD = ['', 'x', 'y', 't', 'b', 'l', 'r']
 const possibleX = ['auto', '0', '0h', '1', '1h']
@@ -26,6 +26,8 @@ const medias = {
   t: 900,
 }
 
+const defaultSizing = Object.fromEntries(possibleX.map(x => [x, convertX(x)]))
+
 function capitalize(string) {
   return string[0].toUpperCase() + string.slice(1)
 }
@@ -51,24 +53,26 @@ function filterPaddingAuto([key, value]) {
   return !(key.startsWith('p') && value === 'auto')
 }
 
-function mpxx(code) {
+function mpxx(code, optionnalSizing = {}) {
   const [mpx, x] = code.split('-')
 
   const mp = mpx[0]
   const d = mpx[1] || ''
 
   if (!(possibleMp.includes(mp) && possibleD.includes(d) && possibleX.includes(x))) {
-    throw new Error(`mpx: invalid code: ${code}`)
+    throw new Error(`mpxx: invalid code: ${code}`)
   }
+
+  const sizing = { ...defaultSizing, ...optionnalSizing }
 
   return {
     code,
     toCss: () => dConversion[d]
-      .map(d => [convertMp(mp, d), convertX(x)])
+      .map(d => [convertMp(mp, d), sizing[x]])
       .filter(filterPaddingAuto)
       .reduce((css, array) => `${css}${array[0]}: ${array[1]} !important; `, ''),
     toJs: () => dConversion[d]
-      .map(d => [convertMp(mp, d, true), convertX(x)])
+      .map(d => [convertMp(mp, d, true), sizing[x]])
       .filter(filterPaddingAuto)
       .reduce((object, array) => Object.assign(object, { [array[0]]: array[1] }), {}),
   }
