@@ -1,6 +1,6 @@
 {
   "name": "mpxx",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "A set of spacing CSS classes",
   "main": "src/index.js",
   "scripts": {

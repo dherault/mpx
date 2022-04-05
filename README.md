@@ -66,7 +66,7 @@ Download the [CSS file](https://raw.githubusercontent.com/dherault/mpxx/main/mpx
 
 Or use a CDN:
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mpxx@6.0.0/mpxx.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mpxx@6.0.1/mpxx.min.css">
 ```
 
 ## Contributing
